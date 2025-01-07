@@ -1,7 +1,12 @@
+import React from 'react'; 
+import ScrollAnimation from './ScrollAnimation'
+
 function Main() {
     return (
         <>
+        
             <main>
+           
                 <div className="pictureContainer">
                     <img
                         className="indexPic"
@@ -9,57 +14,57 @@ function Main() {
                         alt="WelcomeGif"
                     />
                 </div>
-
+                <ScrollAnimation>
                 <section>
-                    {/*  prettier-ignore   */}
+                   
                     <p className="bodytext">
-                        <span className="highlightGrey">I'm Ben,</span> 
-                        a .NET developer in the making with a passion for creating systems. 
-
+                        <span className="highlightGrey">I'm Ben,{"\n"}{"\n"}</span>
+                        a .NET developer in the making with a passion for creating systems.{"\n"} {"\n"} 
                         From orchestrating the perfect symphony of code to fine-tuning digital infrastructures, 
                         I bring my background in designing soundscapes and arrangements within 
-                        music production to the world of tech. 
-                
-                        My goal? 
+                        music production to the world of tech. {"\n"}{"\n"}
+                        My goal? {"\n"}{"\n"}
                         Becoming a maestro of .NET, turning cacophony into harmony, one line of code at a time. 
                     </p>
                 </section>
-
+                </ScrollAnimation>
+                <ScrollAnimation>
                 <div className="conductContainer">
                     <img className="floating-conduct" src="../pictures/conduct.png" alt="Conductor Image"/>
                 </div>
-
+                </ScrollAnimation>
+                <ScrollAnimation>
                 <section>
-                    {/*  prettier-ignore   */}
+                  
                     <p className="bodytext">
-                        As long as I can remember, I've always been surrounded by creative elements. 
-                        So there's no coincidence I tend to gravitate towards anything that involves creativity. 
+                    {"\n"}As long as I can remember, I've always been surrounded by creative elements. {"\n"} 
+                        So there's no coincidence I tend to gravitate towards anything that involves creativity. {"\n"}{"\n"}
+                        <ScrollAnimation>
+                        <img className="floating-note" src="pictures/music.png" alt="Music Note" />  {"\n"}{"\n"}
+                        </ScrollAnimation>
+                        Whether it was being around by brilliant musicians growing up to participating in various music production-teams, I've always thrived in the midst of creation.{"\n"}{"\n"} 
 
-                        <img className="floating-note" src="pictures/music.png" alt="Music Note" />  
+                        After five vibrant years as a sound designer in Stockholm, I was curious if my creativity could evolve and translate into something else. {"\n"}
+                        It sure did. {"\n"}{"\n"}
+                        <img className="floating-cloud" src="pictures/cloud.png" alt="Cloud Image"/>  {"\n"}{"\n"}
                 
-                        Whether it was being around by brilliant musicians growing up to participating in various music production-teams, I've always thrived in the midst of creation. 
-
-                        After five vibrant years as a sound designer in Stockholm, I was curious if my creativity could evolve and translate into something else. 
-                        It sure did. 
-                        <img className="floating-cloud" src="pictures/cloud.png" alt="Cloud Image"/>  
-                
-                        I experience the same kind of flow in programming as I do in creating music; the perception of time is out the window and I'm in this bubble of curiosity and play. 
-                        Chasing a vision. 
+                        I experience the same kind of flow in programming as I do in creating music; the perception of time is out the window and I'm in this bubble of curiosity and play. {"\n"}
+                        Chasing a vision. {"\n"}{"\n"}
 
                         My first leap into the world of ones and zeros is completing a two year education as a .NET developer at Nackademin, Stockholm. 
                         I am about six months in and this is what I've been doing so far: 
                     </p>
                 </section>
-
+                </ScrollAnimation>
 
                 <section class="projectsContainer">
                     <article class="project">
                       <h2>"Laguna Matata Hotel"</h2>
                       <p>
                         The project involved creating a user-friendly application and
-                        database to manage bookings for a fictional hotel or guesthouse
+                        database to manage bookings for a fictional hotel or guesthouse 
                         <span class="highlightGreySmall">
-                          (there were, unfortunately, no extra points awarded for coming up
+                           (there were, unfortunately, no extra points awarded for coming up
                           with a clever name for the hotel.)
                         </span>
                       </p>
@@ -121,7 +126,9 @@ function Main() {
                       <a class="hyperlink" href="tel:+46706196987"
                       >Call me</a>
                 </section>
+                
             </main>
+            
         </>
     );
 }
