@@ -21,12 +21,12 @@ function Main() {
                         music production to the world of tech. 
                 
                         My goal? 
-                        Becoming a maestro of .NET, turning cacophony into harmony, one line of code at a time.
+                        Becoming a maestro of .NET, turning cacophony into harmony, one line of code at a time. 
                     </p>
                 </section>
 
                 <div className="conductContainer">
-                    <img className="floating-conduct" src="pictures/conduct.png" alt="Conductor Image"/>
+                    <img className="floating-conduct" src="../pictures/conduct.png" alt="Conductor Image"/>
                 </div>
 
                 <section>
@@ -109,10 +109,17 @@ function Main() {
                       <p></p>
 
                       <a class="hyperlink" href="https://github.com/benjenner/Shotgun.git"
-                        >GitHub link</a
-                      >
+                        >GitHub link</a>
                       <p></p>
                     </article>
+                </section>
+
+                <section>
+                      <h3>Let's get in touch!</h3>
+                      <a class="hyperlink" href="mailto:benjaminjennersjo@outlook.com"
+                      >Email me</a>
+                      <a class="hyperlink" href="tel:+46706196987"
+                      >Call me</a>
                 </section>
             </main>
         </>
