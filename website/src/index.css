@@ -1,68 +1,543 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "RobotoLight";
+  src: url(fonts/Roboto-Light.ttf);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  font-family: "RobotoLight";
+  background-color: rgb(221, 226, 221);
+  box-sizing: border-box;
+}
+
+main {
+  margin: 20px;
+}
+
+header {
+  /* Varför fungerar inte margin här?  */
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: "Times New Roman";
+  text-align: center;
+  font-size: 130px;
+  margin-top: -30px;
+  animation-name: fadeIn;
+  animation-duration: 1.3s;
+  line-height: 1;
+  margin-bottom: 55px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.h1alt {
+  letter-spacing: -0.05em;
+  margin-bottom: 55px;
+}
+
+.h1altProjects {
+  letter-spacing: -0.05em;
+}
+
+h1::first-letter {
+  font-style: italic;
+  font-size: 1.8em;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  display: inline-block;
+  font-weight: 100;
+  background-color: #e6e6fa;
+  margin: 65px;
+  font-size: 1.8em;
+  border-radius:10px;
+}
+
+footer {
+  display: block;
+  /* Footer placrar sig under alla element */
+  clear: both;
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.linksymbol {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: none;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbaritem {
+  color: rgba(31, 32, 34, 0.788);
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  font-size: 1.2em;
+  text-shadow: 3px 3px 10px rgb(237, 0, 0);
+  animation-name: fadeIn;
+  animation-duration: 1.9s;
+}
+
+.bodytext {
+  white-space: pre-line;
+  font-size: 1.5em;
+  line-height: 1.8;
+}
+
+.hyperlink {
+  margin-left: 65px;
+  font-size: 20px;
+  color:black;
+  text-shadow: 3px 3px 10px rgb(255, 97, 97);
+  text-decoration: underline;  
+  text-decoration-color: #000000; 
+  text-underline-offset: 2px;
+  text-decoration-thickness:4px;
+  border-radius:8px;
+  
+}
+
+.hyperlinkAbout {
+  font-size: 20px;
+  background-color: #e6e6fa;
+  text-decoration: none;
+}
+
+.projectsymbol {
+  display: flex;
+  width: 60px;
+  height: auto;
+  margin: 30px;
+}
+
+#check {
+  display: none;
+}
+
+.hamburgermenu {
+  padding: 10px;
+  display: flex;
+  font-size: 3em;
+  justify-content: flex-end;
+}
+
+.hamburger-icon {
+  font-size: 1.2em;
+}
+
+.mobilemenu {
+  display: none;
+  position: fixed;
+  visibility: none;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.mobilemenu li {
+  display: block;
+  text-align: right;
+  font-size: 20px;
+}
+
+.highlightGrey {
+  
+  background-color: #e6e6fa;
+
+
+  
+  line-height: 1.5;
+  letter-spacing: -0.04em;
+  font-size: 1.5em;
+  animation-name: fadeIn;
+  animation-duration: 1.3s;
+}
+
+.highlightGreySmall {
+  /* color:rgb(160, 158, 158); */
+  background-color: #f1f1fa;
+  animation-name: fadeIn;
+  animation-duration: 1.3s;
+}
+
+#check:checked ~ .mobilemenu {
+  display: flex;
+}
+
+.pictureContainer {
+  display: flex;
+  justify-content: center;
+  margin: 65px;
+}
+
+.indexPic {
+  width: 320px;
+  height: auto;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project {
+  background-image: url("pictures/Laguna Matata Hotel logo fade.png");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  flex: 0 1 auto;
+  gap: 30px;
+  max-width: 1000px;
+  border: 2.5px solid;
+  box-shadow: 2px 2px 20px rgb(104, 104, 104);
+  box-sizing: border-box;
+  border-radius: 30px;
+  animation: borderAnimation 3s infinite;
+  text-align: start;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px;
+}
+
+.footerlink {
+  width: 30px;
+  height: auto;
+}
+
+.weatherButton {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button[type="submit"] {
+  border: none;
+  background-color: #e6e6fa;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: 2em;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.weatherCard {
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+}
+
+.project p {
+  margin: 30px;
+  font-size: 1.4em;
+  line-height: 1.8;
+  border-radius:10px;
+}
+
+.formBoxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+
+  border-radius: 30px;
+  max-width: 600px;
+  /* Centrerar  */
+  margin: 0 auto;
+  box-shadow: 2px 2px 15px #56567e;
+}
+
+.formBoxes label {
+  white-space: pre-line;
+  font-size: 1.3em;
+  line-height: 1.8;
+}
+
+.formBoxes input {
+  padding: 12px;
+  border: none;
+  font-size: 1.3em;
+
+  width: 270px;
+  border: 1px solid;
+}
+
+.formBoxes textarea {
+  width: 100%;
+  height: 300px;
+  font-size: 1.3em;
+}
+
+#email {
+  margin-left: 61px;
+}
+
+#lastname,
+#firstname {
+  margin-left: 15px;
+}
+
+#send {
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100px;
+}
+
+#messageSent {
+  color: rgb(26, 25, 25);
+  font-size: 1.2em;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  margin-top: 10px;
+  display: none;
+}
+
+.floating-cloud {
+  margin-left: 360px;
+  width: 40px;
+  height: auto;
+  position: relative;
+  animation: floatRightLeft 4s infinite ease-in-out;
+}
+
+.floating-note {
+  margin-left: 10px;
+  width: 30px;
+  height: auto;
+  position: relative;
+  animation: rotateRight 2.5s infinite ease-in-out;
+}
+
+.conductContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-conduct {
+  width: 90px;
+  height: auto;
+  position: relative;
+  animation: floatRightLeft 2.5s infinite ease-in-out,
+    rotateRight 2.5s infinite ease-in-out;
+}
+
+.floating-project {
+  margin-top: 50px;
+  width: 40px;
+  height: auto;
+  position: relative;
+  animation: rotateRight 3s infinite;
+}
+
+.pristine-error {
+  color: red;
+  font-size: smaller;
+}
+
+* {
+  max-width: 100%;
+}
+
+/* ------------------------------------------------------------------ */
+@keyframes floatRightLeft {
+  0%,
+  100% {
+    transform: translateX(0);
   }
-  a:hover {
-    color: #747bff;
+  50% {
+    transform: translateX(-15px);
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@keyframes rotateRight {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    color: rgb(230, 226, 226);
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: black;
+  }
+  50% {
+    border-color: rgb(221, 226, 221);
+  }
+  100% {
+    border-color: black;
+  }
+}
+
+/* ------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 12em;
+    margin-top: -40px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+  }
+
+  .hamburgermenu {
+    display: none;
+  }
+
+  .bodytext {
+    margin: 200px 150px;
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: pre-line; 
+  }
+
+  .project {
+    margin-bottom: 80px;
+  }
+
+  .project p {
+    font-size: 2em;
+    margin:65px;
+  }
+
+  h2 {
+    background-color: #e6e6fa;
+    font-size: 3em;
+  }
+
+  .floating-cloud {
+    margin-left: 400px;
+    width: 70px;
+  }
+
+  .floating-note {
+    margin-left: 1px;
+    width: 40px;
+  }
+
+  .floating-conduct {
+    margin-top: -150px;
+    width: 140px;
+  }
+
+  .pictureContainer {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .floating-project {
+    width: 60px;
+  }
+
+  .formBoxes input {
+    width: 400px;
+  }
+
+  .hyperlink {
+    font-size: 30px;
+   
+  }
+
+  .hyperlinkAbout {
+    font-size: 30px;
+  }
+}
+
+/* --------------------------------------------------- */
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 20em;
+    margin-top: -40px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+  }
+
+  .hamburgermenu {
+    display: none;
+  }
+
+  .bodytext {
+
+    margin: 150px 300px;
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: pre-line; 
+  }
+
+  .floating-cloud {
+    margin-left: 600px;
+    width: 60px;
+  }
+
+  .floating-conduct {
+    margin-top: -50px;
+    width: 160px;
+  }
+
+  .pictureContainer {
+    margin-top: -80px;
+    margin-bottom: 30px;
+  }
+
+  .projectsContainer {
+    margin: 150px;
+  }
+
+  .project p {
+    margin: 65px;
+  }
+
+  .formBoxes {
+    margin: 150px auto;
+  }
+
+  .floating-project {
+    margin-top: -100px;
+    width: 70px;
+  }
+
+  .formBoxes input {
+    width: 400px;
   }
 }

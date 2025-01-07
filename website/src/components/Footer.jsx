@@ -1,6 +1,10 @@
+import React from 'react'; 
+import ScrollAnimation from './ScrollAnimation';
+
 function Footer() {
     return (
       <>
+      <ScrollAnimation>
         <footer>
           <p>© Benjamin Jennersjö</p>
   
@@ -15,7 +19,8 @@ function Footer() {
               <img src="pictures/linkedin-square-logo-24.png" />
             </a>
           </div>
-        </footer>
+          </footer>
+        </ScrollAnimation>
       </>
     );
   }

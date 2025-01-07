@@ -1,0 +1,6 @@
+.scroll-animate {
+    --scroll-opacity: 1;
+    opacity: var(--scroll-opacity);
+    transition: opacity 0.5s;
+  }
+  
