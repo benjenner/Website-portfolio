@@ -1,136 +1,195 @@
-import React from 'react'; 
-import ScrollAnimation from './ScrollAnimation'
+import React from "react";
+import ScrollAnimation from "./ScrollAnimation";
 
 function Main() {
-    return (
-        <>
-        
-            <main>
-           
-                <div className="pictureContainer">
-                    <img
-                        className="indexPic"
-                        src="pictures/StopMotionGif4.gif"
-                        alt="WelcomeGif"
-                    />
-                </div>
-                <ScrollAnimation>
-                <section>
-                   
-                    <p className="bodytext">
-                        <span className="highlightGrey">I'm Ben,{"\n"}{"\n"}</span>
-                        a .NET developer in the making with a passion for creating systems.{"\n"} {"\n"} 
-                        From orchestrating the perfect symphony of code to fine-tuning digital infrastructures, 
-                        I bring my background in designing soundscapes and arrangements within 
-                        music production to the world of tech. {"\n"}{"\n"}
-                        My goal? {"\n"}{"\n"}
-                        Becoming a maestro of .NET, turning cacophony into harmony, one line of code at a time. 
-                    </p>
-                </section>
-                </ScrollAnimation>
-                <ScrollAnimation>
-                <div className="conductContainer">
-                    <img className="floating-conduct" src="../pictures/conduct.png" alt="Conductor Image"/>
-                </div>
-                </ScrollAnimation>
-                <ScrollAnimation>
-                <section>
-                  
-                    <p className="bodytext">
-                    {"\n"}As long as I can remember, I've always been surrounded by creative elements. {"\n"} 
-                        So there's no coincidence I tend to gravitate towards anything that involves creativity. {"\n"}{"\n"}
-                        <ScrollAnimation>
-                        <img className="floating-note" src="pictures/music.png" alt="Music Note" />  {"\n"}{"\n"}
-                        </ScrollAnimation>
-                        Whether it was being around by brilliant musicians growing up to participating in various music production-teams, I've always thrived in the midst of creation.{"\n"}{"\n"} 
+  return (
+    <>
+      <main>
+        <ScrollAnimation>
+          <div className="pictureContainer">
+            <img
+              className="indexPic"
+              src="pictures/StopMotionGif4.gif"
+              alt="WelcomeGif"
+            />
+          </div>
+        </ScrollAnimation>
 
-                        After five vibrant years as a sound designer in Stockholm, I was curious if my creativity could evolve and translate into something else. {"\n"}
-                        It sure did. {"\n"}{"\n"}
-                        <img className="floating-cloud" src="pictures/cloud.png" alt="Cloud Image"/>  {"\n"}{"\n"}
-                
-                        I experience the same kind of flow in programming as I do in creating music; the perception of time is out the window and I'm in this bubble of curiosity and play. {"\n"}
-                        Chasing a vision. {"\n"}{"\n"}
+        <section>
+          <p className="bodytext">
+            <ScrollAnimation>
+              <span className="highlightGrey">
+                I'm Ben,{"\n"}
+                {"\n"}
+              </span>
+            </ScrollAnimation>
+            <ScrollAnimation>
+              a .NET developer in the making with a passion for creating
+              systems.{"\n"} {"\n"}
+            </ScrollAnimation>
+            <ScrollAnimation>
+              From orchestrating the perfect symphony of code to fine-tuning
+              digital infrastructures, I bring my background in designing
+              soundscapes and arrangements within music production to the world
+              of tech.{" "}
+            </ScrollAnimation>
+            {"\n"}
+            <ScrollAnimation>My goal? {"\n"}</ScrollAnimation>
+            {"\n"}
+            <ScrollAnimation>
+              Becoming a maestro of .NET, turning cacophony into harmony, one
+              line of code at a time.
+            </ScrollAnimation>
+          </p>
+        </section>
 
-                        My first leap into the world of ones and zeros is completing a two year education as a .NET developer at Nackademin, Stockholm. 
-                        I am about six months in and this is what I've been doing so far: 
-                    </p>
-                </section>
-                </ScrollAnimation>
+        <ScrollAnimation>
+          <div className="conductContainer">
+            <img
+              className="floating-conduct"
+              src="../pictures/conduct.png"
+              alt="Conductor Image"
+            />
+          </div>
+        </ScrollAnimation>
 
-                <section class="projectsContainer">
-                    <article class="project">
-                      <h2>"Laguna Matata Hotel"</h2>
-                      <p>
-                        The project involved creating a user-friendly application and
-                        database to manage bookings for a fictional hotel or guesthouse 
-                        <span class="highlightGreySmall">
-                           (there were, unfortunately, no extra points awarded for coming up
-                          with a clever name for the hotel.)
-                        </span>
-                      </p>
+        <section>
+          <p className="bodytext">
+            <ScrollAnimation>
+              {"\n"}As long as I can remember, I've always been surrounded by
+              creative elements. {"\n"}
+              So there's no coincidence I tend to gravitate towards anything
+              that involves creativity. {"\n"}
+            </ScrollAnimation>
+            {"\n"}
+            <ScrollAnimation>
+              <img
+                className="floating-note"
+                src="pictures/music.png"
+                alt="Music Note"
+              />{" "}
+              {"\n"}
+              {"\n"}
+            </ScrollAnimation>
+            <ScrollAnimation>
+              Whether it was being around by brilliant musicians growing up to
+              participating in various music production-teams, I've always
+              thrived in the midst of creation.{"\n"}
+            </ScrollAnimation>
+            {"\n"}
+            <ScrollAnimation>
+              After five vibrant years as a sound designer in Stockholm, I was
+              curious if my creativity could evolve and translate into something
+              else. {"\n"}
+            </ScrollAnimation>
+            <ScrollAnimation>
+              It sure did. {"\n"}
+              {"\n"}
+            </ScrollAnimation>
+            <ScrollAnimation>
+              <img
+                className="floating-cloud"
+                src="pictures/cloud.png"
+                alt="Cloud Image"
+              />{" "}
+              {"\n"}
+            </ScrollAnimation>
+            <ScrollAnimation>
+              {"\n"}I experience the same kind of flow in programming as I do in
+              creating music; the perception of time is out the window and I'm
+              in this bubble of curiosity and play. {"\n"}
+              Chasing a vision. {"\n"}
+            </ScrollAnimation>
+            <ScrollAnimation>
+              {"\n"}
+              My first leap into the world of ones and zeros is completing a two
+              year education as a .NET developer at Nackademin, Stockholm. I am
+              about six months in and this is what I've been doing so far:
+            </ScrollAnimation>
+          </p>
+        </section>
 
-                      <p>
-                        The application handles room management (single and double rooms),
-                        customer registration and updates, bookings (including search and
-                        prevention of double bookings), cancellation and modification of
-                        bookings, and payment handling. The technical requirements include
-                        using Windows Forms for the interface, Entity Framework for database
-                        interactions, and ensuring the solution is OOP and
-                        functions without errors.
-                      </p>
+        <section class="projectsContainer">
+          <ScrollAnimation>
+            <article class="project">
+              <h2>"Laguna Matata Hotel"</h2>
+              <p>
+                The project involved creating a user-friendly application and
+                database to manage bookings for a fictional hotel or guesthouse
+                <span class="highlightGreySmall">
+                  (there were, unfortunately, no extra points awarded for coming
+                  up with a clever name for the hotel.)
+                </span>
+              </p>
 
-                      <a
-                        class="hyperlink"
-                        href="https://github.com/benjenner/Laguna-Matata.git"
-                        >GitHub link</a
-                      >
-                      <p></p>
-                    </article>
+              <p>
+                The application handles room management (single and double
+                rooms), customer registration and updates, bookings (including
+                search and prevention of double bookings), cancellation and
+                modification of bookings, and payment handling. The technical
+                requirements include using Windows Forms for the interface,
+                Entity Framework for database interactions, and ensuring the
+                solution is OOP and functions without errors.
+              </p>
 
-                    <article class="project">
-                      <h2>"Shotgun"</h2>
-                      <p>
-                        For this school project, I created a game where you play against an
-                        automated opponent. The goal is to shoot your opponent while they
-                        try to block. Both players start without any shots and must "Load"
-                        to get ammunition. If you collect three shots, you can use "Shotgun"
-                        to win instantly.
-                      </p>
-                      <p>
-                        In the game, various scenarios can occur: if both players load, they
-                        both get a shot; if one player loads while the other blocks, the
-                        loader gets a shot; if both block, nothing happens; if one player
-                        shoots while the other blocks, the shooter loses a shot; if both
-                        shoot, they both lose a shot; and if one player shoots while the
-                        other loads, the shooter wins.
-                      </p>
-                      <p>
-                        Key requirements include displaying each player's shots, not
-                        allowing shooting without ammunition, clearly indicating when a
-                        player has won and providing an option to play again, and allowing
-                        "Shotgun" only if a player has at least three shots. The code must
-                        be OOP and the game should run smoothly.
-                      </p>
-                      <p></p>
+              <a
+                class="hyperlink"
+                href="https://github.com/benjenner/Laguna-Matata.git"
+              >
+                GitHub link
+              </a>
+              <p></p>
+            </article>
+          </ScrollAnimation>
 
-                      <a class="hyperlink" href="https://github.com/benjenner/Shotgun.git"
-                        >GitHub link</a>
-                      <p></p>
-                    </article>
-                </section>
+          <article class="project">
+            <h2>"Shotgun"</h2>
+            <p>
+              For this school project, I created a game where you play against
+              an automated opponent. The goal is to shoot your opponent while
+              they try to block. Both players start without any shots and must
+              "Load" to get ammunition. If you collect three shots, you can use
+              "Shotgun" to win instantly.
+            </p>
+            <p>
+              In the game, various scenarios can occur: if both players load,
+              they both get a shot; if one player loads while the other blocks,
+              the loader gets a shot; if both block, nothing happens; if one
+              player shoots while the other blocks, the shooter loses a shot; if
+              both shoot, they both lose a shot; and if one player shoots while
+              the other loads, the shooter wins.
+            </p>
+            <p>
+              Key requirements include displaying each player's shots, not
+              allowing shooting without ammunition, clearly indicating when a
+              player has won and providing an option to play again, and allowing
+              "Shotgun" only if a player has at least three shots. The code must
+              be OOP and the game should run smoothly.
+            </p>
+            <p></p>
 
-                <section>
-                      <h3>Let's get in touch!</h3>
-                      <a class="hyperlink" href="mailto:benjaminjennersjo@outlook.com"
-                      >Email me</a>
-                      <a class="hyperlink" href="tel:+46706196987"
-                      >Call me</a>
-                </section>
-                
-            </main>
-            
-        </>
-    );
+            <a
+              class="hyperlink"
+              href="https://github.com/benjenner/Shotgun.git"
+            >
+              GitHub link
+            </a>
+            <p></p>
+          </article>
+        </section>
+
+        <section>
+          <h3>Let's get in touch!</h3>
+          <a class="hyperlink" href="mailto:benjaminjennersjo@outlook.com">
+            Email me
+          </a>
+          <a class="hyperlink" href="tel:+46706196987">
+            Call me
+          </a>
+        </section>
+      </main>
+    </>
+  );
 }
 
 export default Main;
