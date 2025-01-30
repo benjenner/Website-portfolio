@@ -1,13 +1,13 @@
-import React from 'react'; 
-import ScrollAnimation from './ScrollAnimation';
+import React from "react";
+import ScrollAnimation from "./ScrollAnimation";
 
 function Footer() {
-    return (
-      <>
+  return (
+    <>
       <ScrollAnimation>
         <footer>
-          <p>© Benjamin Jennersjö</p>
-  
+          <p>© 2025 Benjamin Jennersjö. All rights reserved</p>
+
           <div class="linksymbol">
             <a class="footerlink" href="https://github.com/benjenner">
               <img src="pictures/github-logo-24.png" />
@@ -19,11 +19,10 @@ function Footer() {
               <img src="pictures/linkedin-square-logo-24.png" />
             </a>
           </div>
-          </footer>
-        </ScrollAnimation>
-      </>
-    );
-  }
-  
-  export default Footer;
-  
+        </footer>
+      </ScrollAnimation>
+    </>
+  );
+}
+
+export default Footer;

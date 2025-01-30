@@ -5,9 +5,7 @@ function Header() {
     <>
       <ScrollAnimation>
         <header>
-          <h1>
-            Hello<span className="dot">.</span>
-          </h1>
+          <h1>Hello.</h1>
         </header>
       </ScrollAnimation>
     </>
