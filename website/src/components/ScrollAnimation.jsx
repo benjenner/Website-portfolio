@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const ScrollAnimation = ({ children }) => {
   const [ref, inView] = useInView({
-    threshold: 0.4, // När 10% av elementet syns
-    triggerOnce: false, // Observera varje gång elementet kommer in i synfältet
+    threshold: 0.4,
+    triggerOnce: false,
   });
 
   useEffect(() => {

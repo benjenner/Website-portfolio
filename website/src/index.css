@@ -11,12 +11,16 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 main {
   margin: 20px;
 }
 
 header {
-  /* Varför fungerar inte margin här?  */
   margin: 0;
   padding: 0;
 }
@@ -24,17 +28,17 @@ header {
 h1 {
   font-family: "Times New Roman";
   text-align: center;
-  font-size: 130px;
-  margin-top: -30px;
-  animation-name: fadeIn;
-  animation-duration: 2s;
+  font-size: 115px;
+  margin-top: 10px;
   line-height: 1;
-  margin-bottom: 55px;
+  color: rgb(43, 38, 38);
+  text-shadow: 9px 7px 5px rgb(193, 179, 179);
 }
 
-.dot {
-  animation-name: fadeIn;
-  animation-duration: 2s;
+h1::first-letter {
+  font-style: italic;
+  font-size: 1.8em;
+  letter-spacing: -0.05em;
 }
 
 .h1alt {
@@ -46,29 +50,25 @@ h1 {
   letter-spacing: -0.05em;
 }
 
-h1::first-letter {
-  font-style: italic;
-  font-size: 1.8em;
-  letter-spacing: -0.05em;
-}
-
 h2 {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman";
   font-weight: 100;
-  background-color: #e6e6fa;
   margin: 65px;
-  font-size: 1.8em;
-  border-radius: 10px;
+  font-size: 2em;
+  border-radius: 30px;
+  text-shadow: 6px 4px 5px rgb(165, 155, 155);
 }
 
 footer {
   display: block;
-  /* Footer placrar sig under alla element */
   clear: both;
   margin-top: 100px;
   padding: 20px;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .linksymbol {
@@ -76,125 +76,86 @@ footer {
   justify-content: center;
 }
 
-.navbar {
-  display: none;
-  justify-content: flex-end;
-  padding: 15px;
-}
-
-.navbar ul {
-  display: flex;
-  list-style-type: none;
-}
-
-.navbaritem {
-  color: rgba(31, 32, 34, 0.788);
-  text-decoration: none;
-  padding: 20px;
-  display: block;
-  font-size: 1.2em;
-  text-shadow: 3px 3px 10px rgb(237, 0, 0);
-  animation-name: fadeIn;
-  animation-duration: 1.9s;
-}
-
 .bodytext {
   white-space: pre-line;
   font-size: 1.5em;
   line-height: 1.8;
+  margin-top: 50px;
+}
+
+.bodytextEnd {
+  white-space: pre-line;
+  font-size: 1.5em;
+  line-height: 1.8;
+  margin-top: 50px;
 }
 
 .hyperlink {
-  margin-left: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: 20px;
   color: black;
   text-shadow: 3px 3px 10px rgb(255, 97, 97);
-  text-decoration: underline;
-  text-decoration-color: #000000;
-  text-underline-offset: 2px;
-  text-decoration-thickness: 4px;
+  text-decoration: none;
   border-radius: 8px;
 }
 
-.hyperlinkAbout {
-  font-size: 20px;
-  background-color: #e6e6fa;
+.hyperlinkBodyText {
+  color: black;
+  text-shadow: 3px 3px 10px rgb(255, 97, 97);
   text-decoration: none;
+  border-radius: 8px;
 }
 
-.projectsymbol {
+.hyperlinkContact {
   display: flex;
-  width: 60px;
-  height: auto;
-  margin: 30px;
-}
-
-#check {
-  display: none;
-}
-
-.hamburgermenu {
-  padding: 10px;
-  display: flex;
-  font-size: 3em;
-  justify-content: flex-end;
-}
-
-.hamburger-icon {
-  font-size: 1.2em;
-}
-
-.mobilemenu {
-  display: none;
-  position: fixed;
-  visibility: none;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.mobilemenu li {
-  display: block;
-  text-align: right;
-  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 25px;
+  color: black;
+  text-shadow: 3px 3px 10px rgb(255, 97, 97);
+  text-decoration: none;
+  margin-top: 50px;
 }
 
 .highlightGrey {
-  background-color: #e6e6fa;
-
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: -0.04em;
-  font-size: 1.5em;
+  font-size: 1.6em;
   animation-name: fadeIn;
   animation-duration: 1.3s;
 }
 
 .highlightGreySmall {
-  /* color:rgb(160, 158, 158); */
-  background-color: #f1f1fa;
+  font-style: italic;
   animation-name: fadeIn;
   animation-duration: 1.3s;
-}
-
-#check:checked ~ .mobilemenu {
-  display: flex;
 }
 
 .pictureContainer {
   display: flex;
   justify-content: center;
   margin: 65px;
-  animation-name: fadeIn;
-  animation-duration: 4s;
 }
 
 .indexPic {
-  width: 320px;
+  width: 340px;
   height: auto;
-  animation-name: fadeIn;
-  animation-duration: 4s;
+  border-radius: 60px;
 }
 
+.projectPic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  height: auto;
+}
 .projectsContainer {
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -202,10 +163,6 @@ footer {
 }
 
 .project {
-  background-image: url("pictures/Laguna Matata Hotel logo fade.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   flex: 0 1 auto;
   gap: 30px;
   max-width: 800px;
@@ -217,38 +174,10 @@ footer {
   text-align: start;
 }
 
-.skillsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 30px;
-}
-
 .footerlink {
+  margin-top: 5px;
   width: 30px;
   height: auto;
-}
-
-.weatherButton {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-button[type="submit"] {
-  border: none;
-  background-color: #e6e6fa;
-  cursor: pointer;
-  font-size: 2em;
-}
-
-.weatherCard {
-  margin-top: 50px;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  display: none;
 }
 
 .project p {
@@ -263,76 +192,62 @@ button[type="submit"] {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-
   border-radius: 30px;
   max-width: 600px;
-  /* Centrerar  */
   margin: 0 auto;
   box-shadow: 2px 2px 15px #56567e;
 }
 
-.formBoxes label {
-  white-space: pre-line;
-  font-size: 1.3em;
-  line-height: 1.8;
-}
-
-.formBoxes input {
-  padding: 12px;
-  border: none;
-  font-size: 1.3em;
-
-  width: 270px;
-  border: 1px solid;
-}
-
-.formBoxes textarea {
-  width: 100%;
-  height: 300px;
-  font-size: 1.3em;
-}
-
-#email {
-  margin-left: 61px;
-}
-
-#lastname,
-#firstname {
-  margin-left: 15px;
-}
-
-#send {
-  border-radius: 30px;
-  cursor: pointer;
-  width: 100px;
-}
-
-#messageSent {
-  color: rgb(26, 25, 25);
-  font-size: 1.2em;
-  animation-name: fadeIn;
-  animation-duration: 1.5s;
-  margin-top: 10px;
-  display: none;
-}
-
 .floating-cloud {
-  margin-left: 360px;
-  width: 40px;
+  margin-left: 240px;
+  width: 60px;
   height: auto;
   position: relative;
   animation: floatRightLeft 4s infinite ease-in-out;
 }
 
 .floating-note {
-  margin-left: 10px;
+  margin-left: 20px;
   width: 30px;
   height: auto;
   position: relative;
   animation: rotateRight 2.5s infinite ease-in-out;
 }
 
+.projectImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-flamingo {
+  margin: 30px;
+  width: 95px;
+  height: auto;
+  position: relative;
+  animation: rotateLeftRight 2.5s infinite ease-in-out;
+}
+
+.floating-shotgun {
+  margin: 10px;
+  width: 120px;
+  height: auto;
+  position: relative;
+  animation: rotateLeftRight 2.5s infinite ease-in-out;
+}
+
+.floating-cookie {
+  width: 40px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: rotateLeftRight 2.5s infinite ease-in-out;
+  margin-top: 30px;
+}
+
 .conductContainer {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -355,9 +270,37 @@ button[type="submit"] {
   animation: rotateRight 3s infinite;
 }
 
-.pristine-error {
-  color: red;
-  font-size: smaller;
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  padding: 20px;
+  max-width: 800px;
+  border: 2.5px solid;
+  box-shadow: 2px 2px 20px rgb(104, 104, 104);
+  margin: 0 auto;
+  border-radius: 30px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.skillsContainer h2 {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0; /* Marginal upp (20px) och ned (20px) */
+}
+
+.icon {
+  flex: 1 0 100px;
+  margin: 10px;
+}
+
+.icon img {
+  width: 45px;
+  height: auto;
+  filter: grayscale(100%);
 }
 
 * {
@@ -391,19 +334,19 @@ button[type="submit"] {
     color: rgb(221, 226, 221);
   }
   100% {
-    color: black;
+    color: rgb(79, 73, 73);
   }
 }
 
-@keyframes borderAnimation {
+@keyframes rotateLeftRight {
   0% {
-    border-color: black;
+    transform: rotate(0deg);
   }
   50% {
-    border-color: rgb(221, 226, 221);
+    transform: rotate(-15deg);
   }
   100% {
-    border-color: black;
+    transform: rotate(0deg);
   }
 }
 
@@ -413,16 +356,11 @@ button[type="submit"] {
   h1 {
     font-size: 12em;
     margin-top: -40px;
+    text-shadow: 12px 9px 5px rgb(193, 179, 179);
   }
 
-  .navbar {
-    display: flex;
-    justify-content: flex-end;
-    padding: 15px;
-  }
-
-  .hamburgermenu {
-    display: none;
+  h2 {
+    font-size: 3.5em;
   }
 
   .bodytext {
@@ -433,8 +371,19 @@ button[type="submit"] {
     white-space: pre-line;
   }
 
+  .bodytextEnd {
+    margin: 200px 150px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: pre-line;
+  }
+
   .project {
     margin-bottom: 80px;
+    max-width: 200 px;
   }
 
   .project p {
@@ -442,18 +391,13 @@ button[type="submit"] {
     margin: 65px;
   }
 
-  h2 {
-    background-color: #e6e6fa;
-    font-size: 3em;
-  }
-
   .floating-cloud {
     margin-left: 400px;
-    width: 70px;
+    width: 80px;
   }
 
   .floating-note {
-    margin-left: 1px;
+    margin-left: 30px;
     width: 40px;
   }
 
@@ -462,25 +406,46 @@ button[type="submit"] {
     width: 140px;
   }
 
-  .pictureContainer {
-    margin-top: 10px;
+  .floating-cookie {
+    width: 50px;
     margin-bottom: 30px;
   }
 
-  .floating-project {
-    width: 60px;
-  }
-
-  .formBoxes input {
-    width: 400px;
+  .pictureContainer {
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
 
   .hyperlink {
     font-size: 30px;
   }
 
+  .hyperlinkContact {
+    font-size: 30px;
+    margin-top: 50px;
+  }
+
   .hyperlinkAbout {
     font-size: 30px;
+  }
+
+  .floating-flamingo {
+    margin: 60px;
+    width: 130px;
+  }
+
+  .floating-shotgun {
+    margin: 30px;
+    width: 180px;
+  }
+  .icon img {
+    width: 55px;
+    height: auto;
+    filter: grayscale(100%);
+  }
+
+  .project {
+    max-width: 700px;
   }
 }
 
@@ -489,16 +454,7 @@ button[type="submit"] {
   h1 {
     font-size: 20em;
     margin-top: -40px;
-  }
-
-  .navbar {
-    display: flex;
-    justify-content: flex-end;
-    padding: 15px;
-  }
-
-  .hamburgermenu {
-    display: none;
+    text-shadow: 15px 13px 5px rgb(193, 179, 179);
   }
 
   .bodytext {
@@ -509,14 +465,30 @@ button[type="submit"] {
     white-space: pre-line;
   }
 
+  .bodytextEnd {
+    margin: 150px 300px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: pre-line;
+  }
+
   .floating-cloud {
     margin-left: 600px;
-    width: 60px;
+    width: 100px;
   }
 
   .floating-conduct {
     margin-top: -50px;
     width: 160px;
+  }
+
+  .floating-note {
+    margin-left: 60px;
+    width: 50px;
+    height: auto;
   }
 
   .pictureContainer {
@@ -526,22 +498,39 @@ button[type="submit"] {
 
   .projectsContainer {
     margin: 150px;
+    margin-bottom: 20px;
   }
 
   .project p {
     margin: 65px;
   }
 
-  .formBoxes {
-    margin: 150px auto;
+  .floating-flamingo {
+    width: 150px;
   }
 
-  .floating-project {
-    margin-top: -100px;
-    width: 70px;
+  .floating-shotgun {
+    margin: 30px;
+    width: 210px;
   }
 
-  .formBoxes input {
-    width: 400px;
+  .floating-cookie {
+    width: 50px;
+    margin-bottom: 30px;
+  }
+
+  .hyperlinkContact {
+    font-size: 30px;
+    margin-top: 60px;
+  }
+
+  .icon img {
+    width: 65px;
+    height: auto;
+    filter: grayscale(100%);
+  }
+
+  .project {
+    max-width: 850px;
   }
 }
