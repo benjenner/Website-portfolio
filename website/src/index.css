@@ -9,11 +9,7 @@
   font-family: "RobotoLight";
   background-color: rgb(221, 226, 221);
   box-sizing: border-box;
-}
-
-html,
-body {
-  overflow-x: hidden;
+  max-width: 100%;
 }
 
 main {
@@ -289,7 +285,7 @@ footer {
 .skillsContainer h2 {
   width: 100%;
   text-align: center;
-  margin: 20px 0; /* Marginal upp (20px) och ned (20px) */
+  margin: 20px 0;
 }
 
 .icon {
@@ -301,10 +297,6 @@ footer {
   width: 45px;
   height: auto;
   filter: grayscale(100%);
-}
-
-* {
-  max-width: 100%;
 }
 
 /* ------------------------------------------------------------------ */
@@ -350,9 +342,20 @@ footer {
   }
 }
 
+@media only screen and (min-width: 460px) {
+  html,
+  body {
+    overflow-x: visible;
+  }
+}
+
 /* ------------------------------------------------------------------------- */
 
 @media only screen and (min-width: 768px) {
+  html,
+  body {
+    overflow-x: visible;
+  }
   h1 {
     font-size: 12em;
     margin-top: -40px;
@@ -451,6 +454,10 @@ footer {
 
 /* --------------------------------------------------- */
 @media only screen and (min-width: 1200px) {
+  html,
+  body {
+    overflow-x: visible;
+  }
   h1 {
     font-size: 20em;
     margin-top: -40px;
