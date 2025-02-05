@@ -2,7 +2,7 @@
 
 ## About the Project
 
-I wanted to create an attractive and personal portfolio that is easy to engage with and also sheds light on my former background. I chose to do it with React, Vite, and TypeScript.
+I wanted to create an attractive and personal portfolio that is easy to engage with and also sheds light on my former background. I chose to do it with React + Vite, gaining experience within a well known framework.
 
 This portfolio aims to showcase my skills, experience, and achievements in a way that is both visually appealing and user-friendly. By leveraging modern web technologies, I have built a platform that highlights my professional journey and allows visitors to get to know me better.
 
